@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.core.validators import MinLengthValidator
 
-class Squirrel(models:Model):
+class Squirrel(models.Model):
      X = models.DecimalField(
          max_length=100,
          help_text=_('Longitude coordinate for squirrel sighting point'),
