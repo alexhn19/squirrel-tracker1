@@ -19,7 +19,7 @@ class Squirrel(models:Model):
          decimal_places = 15,
          )
      
-     unique_squirrel_ID= models.CharField(
+     unique-squirrel-id= models.CharField(
          max_length=100,
          validators=[MinLengthValidator(10)],
          help_text=_('Identification tag for each squirrel sightings. The tag is comprised of "Hectare ID" + "Shift" + "Date" + "Hectare Squirrel Number."
@@ -159,6 +159,6 @@ class Squirrel(models:Model):
             default= False,
             )
      def __str__(self):
-         return self.unique_squirrel_ID
+         return self.unique-squirrel-id
 
     
