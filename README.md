@@ -16,7 +16,7 @@ Here are all the features of squirrel-tracker1:
 [Django](https://www.djangoproject.com/)
 
 ## Group information
-Project Group Peter & Alex  
-UNIs: [axh2001, pkl2112]  
-[Link](linktoserver.com) to server  
+* **Project** Group Peter & Alex  
+* **UNIs**: [axh2001, pkl2112]  
+* **[Link]**(linktoserver.com) to server  
 
