@@ -9,7 +9,18 @@ def index(request):
     return render(request, 'sightings/index.html', {})
 
 def map(request):
-    return render(request, 'sightings/map.html', {})
+    sightings = Squirrel.objects.all()
+    context = {
+            'sightings': sightings,
+        }
+    return render(request, 'sightings/map.html', context)
+
+def sighting(request):
+    squirrel = Squirrel.objects.all()
+    context = {
+            'squirrels': squirrel,
+        }
+    return render(request, 'sightings//sightings.html',context)
 
 def add_squirrel(request):
     if request.method == "POST":
