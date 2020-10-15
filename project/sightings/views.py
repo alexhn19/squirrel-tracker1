@@ -1,12 +1,29 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .models import Squirrel
+from .forms import SquirrelForm
+
 
 def index(request):
     return render(request, 'sightings/index.html', {})
 
 def map(request):
     return render(request, 'sightings/map.html', {})
+
+def add_squirrel(request):
+    if request.method == "POST":
+        form= SquirrelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/sightings')
+    else:
+        form = SquirrelForm()
+    context ={
+            'form':form,
+        }
+    return render(request,'sightings/add.html',context)
+
 
 def get_stats(request):
     Chasing_count = 0
