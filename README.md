@@ -6,11 +6,17 @@ This tool keeps track of all known squirrels in Central Park based off of the 20
 
 ## Main Features
 Here are all the features of squirrel-tracker1:
-* feature 1
-* feature 2
+* Create new squirrel sighting
+* Update squirrel sighting
+* Map with all squirrel sighiting
+* List of all squirrel sighting
+* General stats about squirrel sighting
 
 ## Dependencies
+[Django](https://www.djangoproject.com/)
 
-[Django][1]
+## Group information
+Project Group Peter & Alex  
+UNIs: [axh2001, pkl2112]  
+[Link](linktoserver.com) to server  
 
-[1]: linktodjango.com
