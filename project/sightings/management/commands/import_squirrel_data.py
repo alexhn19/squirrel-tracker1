@@ -8,10 +8,10 @@ class Command(BaseCommand):
     help = 'Load squirrel data'
 
     def add_arguments(self, parser):
-        parser.add_argument('squirrel.csv', help = 'file containing squirrel data')
+        parser.add_argument('csv_file', help = 'file containing squirrel data')
 
     def handle(self, *args, **options):
-        file_ = options['squirrel.csv']
+        file_ = options['csv_file']
 
         with open(file_) as fp:
             reader = csv.DictReader(fp)
@@ -49,22 +49,4 @@ class Command(BaseCommand):
             msg = f'You are importing from {file_}'
 
             self.stdout.write(self.style.SUCCESS(msg))
-
-
-
-    def receive_data(request):
-
-        if request.method == 'POST':
-            
-            form = SquirrelSightingForm(request.POST)
-
-            if form.is_valid():
-                form.save()
-            else:
-                return HTTPResponse(form.errors)
-
-            return HTTPResponse
-
-        else:
-            return HTTPResponse(SquirrelSightingsForm)
 
