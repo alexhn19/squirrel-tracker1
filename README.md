@@ -1,7 +1,16 @@
 # squirrel-tracker1
 
-This tool was inspired by Mr. Hosencratz, who would like to keep track of all known squirrels. Initially, we are tasked with looking at the squirrels in Central Park based off of the 2018 Central Park Squirrel Census date.
+## What is it ?
 
-## Use cases
+This tool keeps track of all known squirrels in Central Park based off of the 2018 Central Park Squirrel Census date.
 
-## Behavior
+## Main Features
+Here are all the features of squirrel-tracker1:
+* feature 1
+* feature 2
+
+## Dependencies
+
+[Django][1]
+
+[1]: linktodjango.com
