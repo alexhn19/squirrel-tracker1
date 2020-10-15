@@ -7,4 +7,7 @@ def index(request):
 
 def map(request):
     return render(request, 'sightings/map.html', {})
-    
+
+def stats(request):
+    return render(request, 'sightings/stats.html', {})
+
