@@ -9,6 +9,12 @@
         <h1> Here are all the possible actions. </h1>
 	<p>
 	    <p><a href = '/sightings/add'>Add Squirrel</a></p>
+	<h1> Link to all squirrels. </h1>   
+	    <ul>
+		{% for squirrel in squirrels %}
+		<li> <a href='/sightings/{{squirrel.unique_squirrel_ID}}/'> {{squirrel.unique_squirrel_ID}} </a> </li>
+		{% endfor %}
+	</ul>
 	    <p><a href='/'>Return to main page</a></p>
     </body>
 
