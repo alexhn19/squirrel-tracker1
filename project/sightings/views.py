@@ -39,4 +39,4 @@ def get_stats(request):
             'climbing_percent':climbing_percent,
             'chasing_percent':chasing_percent,
             }
-    return render(request, 'tracker_app/stats.html', context)
+    return render(request, 'sightings/stats.html', context)
