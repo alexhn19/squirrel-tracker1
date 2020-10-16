@@ -41,5 +41,5 @@ class Command(BaseCommand):
                 write = csv.DictWriter(fp, delimiter = ",", fieldnames = dict_.keys())
                 write.writeheader()
                 write.writerow(dict_)
-            msg = f'You are exporting to {csv_file}'
+            msg = f'You are exporting'
             self.stdout.write(self.style.SUCCESS(msg))
