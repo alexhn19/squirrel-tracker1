@@ -63,7 +63,7 @@ class Squirrel(models.Model):
             (CINNAMON,_('Cinnamon')),
             (BLACK,_('Black')),
          )
-     PrimaryFurColor = models.CharField(
+     Primary_Fur_Color = models.CharField(
             max_length=100,
             blank=True,
             choices= COLOR_CHOICES,
@@ -81,7 +81,7 @@ class Squirrel(models.Model):
             blank=True,
             help_text=_('Value is either "Ground Plane" or "Above Ground." Sighters were instructed to indicate the location of where the squirrel was when first sighted.'),
          )
-     SpecificLocation = models.CharField(
+     Specific_Location = models.CharField(
             max_length=200,
             blank=True,
             help_text=_('Sighters occasionally added commentary on the squirrel location. These notes are provided here.'),
@@ -111,7 +111,7 @@ class Squirrel(models.Model):
             help_text=_('Squirrel was seen  foraging for food'),
             default = False,
             )
-     OtherActivities = models.CharField(
+     Other_Activities = models.CharField(
             max_length=200,
             blank=True,
             help_text=_(''),
@@ -133,12 +133,12 @@ class Squirrel(models.Model):
             help_text=_('Squirrel was heard moaning, a high-pitched vocal communication which can indicate the presence of an air predator such as a hawk.'),
             default = False,
             )
-     TailFlags = models.BooleanField(
+     Tail_Flags = models.BooleanField(
             max_length = 10,
             help_text=_("Squirrel was seen flagging its tail. Flagging is a whipping motion used to exaggerate squirrel's size and confuse rivals or predators. Looks as if the squirrel is scribbling with tail into the air."),
             default = False,
             )
-     TailTwitches = models.BooleanField(
+     Tail_Twitches = models.BooleanField(
             max_length = 10,
             help_text=_('Squirrel was seen twitching its tail. Looks like a wave running through the tail, like a breakdancer doing the arm wave. Often used to communicate interest, curiosity.'),
             default= False,
@@ -153,7 +153,7 @@ class Squirrel(models.Model):
             help_text=_('Squirrel was indifferent to human presence'),
             default = False,
             )
-     RunsFrom = models.BooleanField(
+     Runs_From = models.BooleanField(
             max_length = 10,
             help_text=_('Squirrel was seen running from humans, seeing them as a threat'),
             default= False,
