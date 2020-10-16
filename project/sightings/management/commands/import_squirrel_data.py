@@ -13,7 +13,6 @@ class Command(BaseCommand):
             parser.add_argument('path', type=str)
 
         def handle(self, *args, **kwargs):
-<<<<<<< HEAD
             Squirrel.objects.all().delete()
             path = kwargs['path']
             with open(path, 'rt') as f:
@@ -44,7 +43,6 @@ class Command(BaseCommand):
                             Approaches=strtobool(row['Approaches']),
                             Indifferent=strtobool(row['Indifferent']),
                             Runs_From=strtobool(row['Runs from']),
-=======
             path = kwargs['path']
             with open(path, 'rt') as f:
                 reader = csv.reader(f, dialect='excel')
@@ -74,7 +72,6 @@ class Command(BaseCommand):
                             Approaches=(row[26]=='true'),
                             Indifferent=(row[27]=='true'),
                             Runs_From=(row[28] == 'true'),
->>>>>>> 2bbb717e1f5bf24e732d883cf23b4b0ce995b347
                             )
                     squirrel.save()
 
