@@ -20,8 +20,8 @@ class Command(BaseCommand):
                 data = list(reader)
                 for row in data:
                     squirrel = Squirrel(
-                            latitude=row['X'],
-                            longitude=row['Y'],
+                            longitude=row['X'],
+                            latitude=row['Y'],
                             unique_squirrel_id=row['Unique Squirrel ID'],
                             shift=row['Shift'],
                             date=row['Date'],
@@ -51,8 +51,8 @@ class Command(BaseCommand):
                 try:
                     for row in reader:
                         squirrel = Squirrel.objects.create(
-                        latitude=row[0],
-                        longitude=row[1],
+                        longitude=row[0],
+                        latitude=row[1],
                         unique_squirrel_id=row[2],
                         shift=row[4],
                         date = str(row[5])[4:] + '-' + str(row[5])[:2] + '-' + str(row[5])[2:4],
