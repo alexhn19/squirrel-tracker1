@@ -38,7 +38,7 @@ class Command(BaseCommand):
                 dict_['Indifferent'] = item.Indifferent
                 dict_['Runs from'] = item.Runs_From
                 
-                write = csv.DictWriter(fp, delimter = ",", fieldnames = dict_.keys())
+                write = csv.DictWriter(fp, delimiter = ",", fieldnames = dict_.keys())
                 write.writeheader()
                 write.writerow(dict_)
             msg = f'You are exporting to {file_}'
