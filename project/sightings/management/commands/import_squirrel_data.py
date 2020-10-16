@@ -1,7 +1,7 @@
 import csv
 
 from django.core.management import BaseCommand
-from tracker_app.models import Squirrel
+from sightings.models import Squirrel
 import argparse
 
 from distutils.util import strtobool
