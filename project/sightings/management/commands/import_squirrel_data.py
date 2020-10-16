@@ -22,7 +22,7 @@ class Command(BaseCommand):
                     squirrel = Squirrel(
                             X=row['X'],
                             Y=row['Y'],
-                            unique_squirrel_ID=row['Unique Squirrel ID'],
+                            Unique_Squirrel_ID=row['Unique Squirrel ID'],
                             Shift=row['Shift'],
                             Date=row['Date'],
                             Age=row['Age'],
