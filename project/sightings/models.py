@@ -19,7 +19,7 @@ class Squirrel(models.Model):
          decimal_places = 15,
          )
      
-     unique_squirrel_ID = models.CharField(
+     Unique_Squirrel_ID = models.CharField(
          max_length=100,
          validators=[MinLengthValidator(10)],
          help_text=_('Identification tag for each squirrel sightings. The tag is comprised of "Hectare ID" + "Shift" + "Date" + "Hectare Squirrel Number."'),
@@ -111,7 +111,7 @@ class Squirrel(models.Model):
             help_text=_('Squirrel was seen  foraging for food'),
             default = False,
             )
-     Other_activities = models.CharField(
+     Other_Activities = models.CharField(
             max_length=200,
             blank=True,
             help_text=_(''),
@@ -133,12 +133,12 @@ class Squirrel(models.Model):
             help_text=_('Squirrel was heard moaning, a high-pitched vocal communication which can indicate the presence of an air predator such as a hawk.'),
             default = False,
             )
-     Tail_flags = models.BooleanField(
+     Tail_Flags = models.BooleanField(
             max_length = 10,
             help_text=_("Squirrel was seen flagging its tail. Flagging is a whipping motion used to exaggerate squirrel's size and confuse rivals or predators. Looks as if the squirrel is scribbling with tail into the air."),
             default = False,
             )
-     Tail_twitches = models.BooleanField(
+     Tail_Twitches = models.BooleanField(
             max_length = 10,
             help_text=_('Squirrel was seen twitching its tail. Looks like a wave running through the tail, like a breakdancer doing the arm wave. Often used to communicate interest, curiosity.'),
             default= False,
