@@ -35,8 +35,8 @@ def add_squirrel(request):
         }
     return render(request,'sightings/add.html',context)
 
-def update_squirrel(request, Unique_Squirrel_ID):
-    squirrel= Squirrel.objects.get(Unique_Squirrel_ID = Unique_Squirrel_ID)
+def update_squirrel(request, unique_squirrel_id):
+    squirrel= Squirrel.objects.get(unique_squirrel_id = unique_squirrel_id)
     if request.method =='POST':
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
@@ -59,15 +59,15 @@ def get_stats(request):
     climbing_count = 0
     length = 0
     for i in Squirrel.objects.all():
-        if i.Chasing == True:
+        if i.chasing == True:
             chasing_count += 1
-        if i.Eating == True:
+        if i.eating == True:
             eating_count += 1
-        if i.Climbing== True:
+        if i.climbing== True:
             climbing_count += 1
-        if i.Running == True:
+        if i.running == True:
             running_count += 1
-        if i.Foraging == True:
+        if i.foraging == True:
             foraging_count += 1
         length += 1
     running_percent='{:.2%}'.format(running_count/length)
