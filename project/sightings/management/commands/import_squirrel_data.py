@@ -43,6 +43,7 @@ class Command(BaseCommand):
                             Approaches=strtobool(row['Approaches']),
                             Indifferent=strtobool(row['Indifferent']),
                             Runs_From=strtobool(row['Runs from']),
+                    )
             path = kwargs['path']
             with open(path, 'rt') as f:
                 reader = csv.reader(f, dialect='excel')
