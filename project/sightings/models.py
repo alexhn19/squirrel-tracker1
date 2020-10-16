@@ -38,7 +38,7 @@ class Squirrel(models.Model):
          blank = True,
          )
      Date = models.DateField(
-         help_text=_('Concatenation of the sighting session day and month.'),
+         help_text=_('YYYY-MM-DD'),
          blank = True,
          )
 
@@ -114,7 +114,7 @@ class Squirrel(models.Model):
      Other_activities = models.CharField(
             max_length=200,
             blank=True,
-            help_text=_('Other activities '),
+            help_text=_(''),
            )
      Kuks = models.BooleanField(
             max_length = 10,
