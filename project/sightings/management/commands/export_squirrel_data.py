@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 dict_['Climbing'] = item.Climbing
                 dict_['Eating'] = item.Eating
                 dict_['Foraging'] = item.Foraging
-                dict_['Other Activities'] = item.Other_Activities 
+                dict_['Other Activities'] = item.Other_activities 
                 dict_['Kuks'] = item.Kuks
                 dict_['Quaas'] = item.Quaas
                 dict_['Moans'] = item.Moans
