@@ -20,23 +20,23 @@ class Command(BaseCommand):
                 dict_['Shift'] = item.Shift
                 dict_['Date'] = item.Date
                 dict_['Age'] = item.Age
-                dict_['Primary Fur Color'] = item.PrimaryFurColor
+                dict_['Primary Fur Color'] = item.Primary_Fur_Color
                 dict_['Location'] = item.Location
-                dict_['Specific Location'] = item.SpecificLocation 
+                dict_['Specific Location'] = item.Specific_Location 
                 dict_['Running'] = item.Running
                 dict_['Chasing'] = item.Chasing
                 dict_['Climbing'] = item.Climbing
                 dict_['Eating'] = item.Eating
                 dict_['Foraging'] = item.Foraging
-                dict_['Other Activities'] = item.OtherActivities 
+                dict_['Other Activities'] = item.Other_Activities 
                 dict_['Kuks'] = item.Kuks
                 dict_['Quaas'] = item.Quaas
                 dict_['Moans'] = item.Moans
-                dict_['Tail flags'] = item.TailFlags
-                dict_['Tail twitches'] = item.TailTwitches
+                dict_['Tail flags'] = item.Tail_Flags
+                dict_['Tail twitches'] = item.Tail_Twitches
                 dict_['Approaches'] = item.Approaches 
                 dict_['Indifferent'] = item.Indifferent
-                dict_['Runs from'] = item.RunsFrom
+                dict_['Runs from'] = item.Runs_From
                 
                 write = csv.DictWriter(fp, delimiter = ",", fieldnames = dict_.keys())
                 write.writeheader()
