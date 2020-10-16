@@ -70,11 +70,11 @@ def get_stats(request):
         if i.Foraging == True:
             Foraging_count += 1
         length += 1
-    running_percent=Running_count/length
-    chasing_percent=Chasing_count/length
-    eating_percent=Eating_count/length
-    foraging_percent=Foraging_count/length
-    climbing_percent=Climbing_count/length
+    running_percent='{:.2%}'.format(Running_count/length)
+    chasing_percent='{:.2%}'.format(Chasing_count/length)
+    eating_percent='{:.2%}'.format(Eating_count/length)
+    foraging_percent='{:.2%}'.format(Foraging_count/length)
+    climbing_percent='{:.2%}'.format(Climbing_count/length)
     context = {
             'running_percent':running_percent,
             'eating_percent':eating_percent,
