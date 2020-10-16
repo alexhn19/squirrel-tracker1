@@ -35,8 +35,8 @@ def add_squirrel(request):
         }
     return render(request,'sightings/add.html',context)
 
-def update_squirrel(request, unique_squirrel_ID):
-    squirrel= Squirrel.objects.get(unique_squirrel_ID = unique_squirrel_ID)
+def update_squirrel(request, Unique_Squirrel_ID):
+    squirrel= Squirrel.objects.get(Unique_Squirrel_ID = Unique_Squirrel_ID)
     if request.method =='POST':
         form = SquirrelForm(request.POST, instance = squirrel)
         if form.is_valid():
@@ -52,29 +52,29 @@ def update_squirrel(request, unique_squirrel_ID):
 
 
 def get_stats(request):
-    Chasing_count = 0
-    Eating_count = 0
-    Running_count = 0
-    Foraging_count = 0
-    Climbing_count = 0
+    chasing_count = 0
+    eating_count = 0
+    running_count = 0
+    foraging_count = 0
+    climbing_count = 0
     length = 0
     for i in Squirrel.objects.all():
         if i.Chasing == True:
-            Chasing_count += 1
+            chasing_count += 1
         if i.Eating == True:
-            Eating_count += 1
+            eating_count += 1
         if i.Climbing== True:
-            Climbing_count += 1
+            climbing_count += 1
         if i.Running == True:
-            Running_count += 1
+            running_count += 1
         if i.Foraging == True:
-            Foraging_count += 1
+            foraging_count += 1
         length += 1
-    running_percent='{:.2%}'.format(Running_count/length)
-    chasing_percent='{:.2%}'.format(Chasing_count/length)
-    eating_percent='{:.2%}'.format(Eating_count/length)
-    foraging_percent='{:.2%}'.format(Foraging_count/length)
-    climbing_percent='{:.2%}'.format(Climbing_count/length)
+    running_percent='{:.2%}'.format(running_count/length)
+    chasing_percent='{:.2%}'.format(chasing_count/length)
+    eating_percent='{:.2%}'.format(eating_count/length)
+    foraging_percent='{:.2%}'.format(foraging_count/length)
+    climbing_percent='{:.2%}'.format(climbing_count/length)
     context = {
             'running_percent':running_percent,
             'eating_percent':eating_percent,
