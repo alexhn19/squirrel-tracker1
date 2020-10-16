@@ -34,7 +34,7 @@ class Command(BaseCommand):
                             climbing=strtobool(row['Climbing']),
                             eating=strtobool(row['Eating']),
                             foraging=strtobool(row['Foraging']),
-                            other_Activities=row['Other Activities'],
+                            other_activities=row['Other Activities'],
                             kuks=strtobool(row['Kuks']),
                             quaas=strtobool(row['Quaas']),
                             moans=strtobool(row['Moans']),
