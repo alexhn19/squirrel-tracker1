@@ -1,57 +1,80 @@
 import csv
 
-from django.core.management.base import BaseCommand
+from django.core.management import BaseCommand
+from tracker_app.models import Squirrel
+import argparse
 
-from sightings.models import Squirrel
+from distutils.util import strtobool
 
 class Command(BaseCommand):
-    help = 'Load squirrel data'
+        help = 'Load squirrel data  into the database'
+            
+        def add_arguments(self,parser):
+            parser.add_argument('path', type=str)
 
-    def add_arguments(self, parser):
-        parser.add_argument('csv_file', help = 'file containing squirrel data')
-
-    def handle(self, *args, **options):
-        file_ = options['csv_file']
-        
-        try:
-
-            with open(file_) as fp:
-                reader = csv.DictReader(fp)
-
-
-                for item in reader:
-                    obj = Squirrel()
-
-                    obj.latitude = item['X']
-                    obj.longitude = item['Y']
-                    obj.unique_squirrel_id = item['Unique Squirrel ID']
-                    obj.hectare = item['Hectare']
-                    obj.shift = item['Shift']
-                    obj.date = item['Date']
-                    obj.age = item['Age']
-                    obj.primary_fur_color = item['Primary Fur Color']
-                    obj.location = item['Location']
-                    obj.specific_location = item['Specific Location']
-                    obj.running = item['Running']
-                    obj.chasing = item['Chasing']
-                    obj.climbing = item['Climbing']
-                    obj.eating = item['Eating']
-                    obj.foraging = item['Foraging']
-                    obj.other_activities = item['Other Activities']
-                    obj.kuks = item['Kuks']
-                    obj.quaas = item['Quaas']
-                    obj.moans = item['Moans']
-                    obj.tail_flags = item['Tail flags']
-                    obj.tail_twitches = item['Tail twitches']
-                    obj.approaches = item['Approaches']
-                    obj.indifferent = item['Indifferent']
-                    obj.runs_from = item['Runs from']
-
-                    obj.save()
-
-                msg = f'You are importing from {file_}'
-
-                self.stdout.write(self.style.SUCCESS(msg))
-        except csv.Error as e:
-                print(f'there is something wrong with {fp.line_num}')
+        def handle(self, *args, **kwargs):
+<<<<<<< HEAD
+            Squirrel.objects.all().delete()
+            path = kwargs['path']
+            with open(path, 'rt') as f:
+                reader = csv.DictReader(f)
+                data = list(reader)
+                for row in data:
+                    squirrel = Squirrel(
+                            X=row['\ufeffX'],
+                            Y=row['Y'],
+                            UID=row['Unique Squirrel ID'],
+                            Shift=row['Shift'],
+                            Date=row['Date'],
+                            Age=row['Age'],
+                            Primary_Fur_Color=row['Primary Fur Color'],
+                            Location=row['Location'],
+                            Specific_Location=row['Specific Location'],
+                            Running=strtobool(row['Running']),
+                            Chasing=strtobool(row['Chasing']),
+                            Climbing=strtobool(row['Climbing']),
+                            Eating=strtobool(row['Eating']),
+                            Foraging=strtobool(row['Foraging']),
+                            Other_activities=row['Other Activities'],
+                            Kuks=strtobool(row['Kuks']),
+                            Quaas=strtobool(row['Quaas']),
+                            Moans=strtobool(row['Moans']),
+                            Tail_flags=strtobool(row['Tail flags']),
+                            Tail_twitches=strtobool(row['Tail twitches']),
+                            Approaches=strtobool(row['Approaches']),
+                            Indifferent=strtobool(row['Indifferent']),
+                            Runs_From=strtobool(row['Runs from']),
+=======
+            path = kwargs['path']
+            with open(path, 'rt') as f:
+                reader = csv.reader(f, dialect='excel')
+                next(reader,None)
+                for row in reader:
+                    squirrel = Squirrel.objects.create(
+                            X=row[0],
+                            Y=row[1],
+                            UID=row[2],
+                            Shift=row[4],
+                            Date=row[5],
+                            Age=row[7],
+                            Primary_Fur_Color=row[8],
+                            Location=row[12],
+                            Specific_Location=row[14],
+                            Running=(row[15]=='true'),
+                            Chasing=(row[16]=='true'),
+                            Climbing=(row[17]=='true'),
+                            Eating=(row[18]=='true'),
+                            Foraging=(row[19]=='true'),
+                            Other_activities=row[20],
+                            Kuks=(row[21]=='true'),
+                            Quaas=(row[22]=='true'),
+                            Moans=(row[23]=='true'),
+                            Tail_flags=(row[24]=='true'),
+                            Tail_twitches=(row[25]=='true'),
+                            Approaches=(row[26]=='true'),
+                            Indifferent=(row[27]=='true'),
+                            Runs_From=(row[28] == 'true'),
+>>>>>>> 2bbb717e1f5bf24e732d883cf23b4b0ce995b347
+                            )
+                    squirrel.save()
 
