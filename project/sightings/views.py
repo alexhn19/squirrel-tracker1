@@ -9,7 +9,7 @@ def index(request):
     return render(request, 'sightings/index.html', {})
 
 def map(request):
-    sightings = Squirrel.objects.all()
+    sightings = Squirrel.objects.all()[:100]
     context = {
             'sightings': sightings,
         }
