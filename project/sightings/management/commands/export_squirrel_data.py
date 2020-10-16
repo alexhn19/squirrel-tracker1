@@ -16,27 +16,27 @@ class Command(BaseCommand):
             for item in s:
                 dict_['X'] = item.X
                 dict_['Y'] = item.Y
-                dict_['Unique Squirrel ID'] = item.unique_squirrel_id
-                dict_['Shift'] = item.shift
-                dict_['Date'] = item.date 
-                dict_['Age'] = item.age
-                dict_['Primary Fur Color'] = item.primary_fur_color
-                dict_['Location'] = item.location
-                dict_['Specific Location'] = item.specific_location 
-                dict_['Running'] = item.running
-                dict_['Chasing'] = item.chasing
-                dict_['Climbing'] = item.climbing
-                dict_['Eating'] = item.eating
-                dict_['Foraging'] = item.foraging
-                dict_['Other Activities'] = item.other_activities 
-                dict_['Kuks'] = item.kuks
-                dict_['Quaas'] = item.quaas
-                dict_['Moans'] = item.moans
-                dict_['Tail flags'] = item.tail_flags
-                dict_['Tail twitches'] = item.tail_twitches
-                dict_['Approaches'] = item.approaches 
-                dict_['Indifferent'] = item.indifferent
-                dict_['Runs from'] = item.runs_from
+                dict_['Unique Squirrel ID'] = item.Unique_Squirrel_ID
+                dict_['Shift'] = item.Shift
+                dict_['Date'] = item.Date
+                dict_['Age'] = item.Age
+                dict_['Primary Fur Color'] = item.PrimaryFurColor
+                dict_['Location'] = item.Location
+                dict_['Specific Location'] = item.SpecificLocation 
+                dict_['Running'] = item.Running
+                dict_['Chasing'] = item.Chasing
+                dict_['Climbing'] = item.Climbing
+                dict_['Eating'] = item.Eating
+                dict_['Foraging'] = item.Foraging
+                dict_['Other Activities'] = item.OtherActivities 
+                dict_['Kuks'] = item.Kuks
+                dict_['Quaas'] = item.Quaas
+                dict_['Moans'] = item.Moans
+                dict_['Tail flags'] = item.TailFlags
+                dict_['Tail twitches'] = item.TailTwitches
+                dict_['Approaches'] = item.Approaches 
+                dict_['Indifferent'] = item.Indifferent
+                dict_['Runs from'] = item.RunsFrom
                 
                 write = csv.DictWriter(fp, delimiter = ",", fieldnames = dict_.keys())
                 write.writeheader()
