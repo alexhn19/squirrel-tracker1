@@ -78,6 +78,6 @@ class Command(BaseCommand):
                     squirrel.save()
                 except:
                     pass
-                msg = f'You are exporting'
+                msg = f'You are importing'
                 self.stdout.write(self.style.SUCCESS(msg))
 
