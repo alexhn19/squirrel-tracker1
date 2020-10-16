@@ -52,7 +52,6 @@ class Command(BaseCommand):
                 msg = f'You are importing from {file_}'
 
                 self.stdout.write(self.style.SUCCESS(msg))
-        except:
-            csv.Error as e:
+        except csv.Error as e:
                 print(f'there is something wrong with {fp.line_num}')
 
