@@ -55,6 +55,8 @@ class Command(BaseCommand):
                             unique_squirrel_ID=row[2],
                             Shift=row[4],
                             Date=row[5],
+                            Date= str(Date),
+                            Date = Date[4:] + '-' + Date[:2] + '-' + Date[2:4],
                             Age=row[7],
                             Primary_Fur_Color=row[8],
                             Location=row[12],
