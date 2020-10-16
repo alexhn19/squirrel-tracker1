@@ -47,7 +47,7 @@ def update_squirrel(request, Unique_Squirrel_ID):
     context ={
             'form':form,
              }
-    return render(request, 'sightings/update.html', context)
+    return render(request, 'sightings/add.html', context)
 
 
 
