@@ -19,7 +19,7 @@ class Command(BaseCommand):
                 dict_['Unique Squirrel ID'] = item.unique_squirrel_id
                 dict_['Shift'] = item.shift
                 dict_['Date'] = item.date 
-                dict_['age'] = item.age
+                dict_['Age'] = item.age
                 dict_['Primary Fur Color'] = item.primary_fur_color
                 dict_['Location'] = item.location
                 dict_['Specific Location'] = item.specific_location 

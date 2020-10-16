@@ -25,7 +25,7 @@ class Command(BaseCommand):
                 obj.hectare = item['Hectare']
                 obj.shift = item['Shift']
                 obj.date = item['Date']
-                obj.age = item['age']
+                obj.age = item['Age']
                 obj.primary_fur_color = item['Primary Fur Color']
                 obj.location = item['Location']
                 obj.specific_location = item['Specific Location']
