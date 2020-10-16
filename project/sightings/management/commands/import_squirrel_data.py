@@ -20,7 +20,7 @@ class Command(BaseCommand):
                 data = list(reader)
                 for row in data:
                     squirrel = Squirrel(
-                            X=row['\ufeffX'],
+                            X=row['X'],
                             Y=row['Y'],
                             UID=row['Unique Squirrel ID'],
                             Shift=row['Shift'],
