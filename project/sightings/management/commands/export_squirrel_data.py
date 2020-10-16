@@ -16,7 +16,7 @@ class Command(BaseCommand):
             for item in s:
                 dict_['X'] = item.X
                 dict_['Y'] = item.Y
-                dict_['Unique Squirrel ID'] = item.unique_squirrel_ID
+                dict_['Unique Squirrel ID'] = item.Unique_Squirrel_ID
                 dict_['Shift'] = item.Shift
                 dict_['Date'] = item.Date 
                 dict_['Age'] = item.Age
@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 dict_['Climbing'] = item.Climbing
                 dict_['Eating'] = item.Eating
                 dict_['Foraging'] = item.Foraging
-                dict_['Other Activities'] = item.Other_activities 
+                dict_['Other Activities'] = item.Other_Activities 
                 dict_['Kuks'] = item.Kuks
                 dict_['Quaas'] = item.Quaas
                 dict_['Moans'] = item.Moans
