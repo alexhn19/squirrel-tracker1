@@ -14,8 +14,8 @@ class Command(BaseCommand):
         s = Squirrel.objects.all()
         with open(options['csv_file'], 'w') as fp:
             for item in s:
-                dict_['X'] = item.longitude
-                dict_['Y'] = item.latitude
+                dict_['X'] = item.X
+                dict_['Y'] = item.Y
                 dict_['Unique Squirrel ID'] = item.unique_squirrel_id
                 dict_['Shift'] = item.shift
                 dict_['Date'] = item.date 
