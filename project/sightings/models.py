@@ -159,6 +159,6 @@ class Squirrel(models.Model):
             default= False,
             )
      def __str__(self):
-         return self.unique_squirrel_ID
+         return self.Unique_Squirrel_ID
 
     
