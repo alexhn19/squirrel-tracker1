@@ -22,7 +22,7 @@ class Command(BaseCommand):
                     squirrel = Squirrel(
                             X=row['X'],
                             Y=row['Y'],
-                            UID=row['Unique Squirrel ID'],
+                            unique_squirrel_ID=row['Unique Squirrel ID'],
                             Shift=row['Shift'],
                             Date=row['Date'],
                             Age=row['Age'],
@@ -52,7 +52,7 @@ class Command(BaseCommand):
                     squirrel = Squirrel.objects.create(
                             X=row[0],
                             Y=row[1],
-                            UID=row[2],
+                            unique_squirrel_ID=row[2],
                             Shift=row[4],
                             Date=row[5],
                             Age=row[7],
