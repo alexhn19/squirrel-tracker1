@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Squirrel tracker</title>
-  <!-- Required meta tags -->
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -23,29 +22,9 @@
         height: 100%;
       }
     </style>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="/">ST1</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="sightings/">Squirrel Data</a></li>
-        <li><a href="map/">Map</a></li>
-        <li><a href="sightings/stats/">Statistics</a></li>
-        <li><a href="/sightings/add/">Add New Squirrel</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </head>
+  <body>
+    <div id="map" class="container-fluid h-100"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -77,11 +56,5 @@
           var marker = L.marker(point_lat_lon).addTo(map);
         {% endfor %}
     </script>
-    </div>
-
-<footer class="container-fluid text-center">
-  <p>Group: Peter & Alex</p>
-</footer>
-
-</body>
+  </body>
 </html>
