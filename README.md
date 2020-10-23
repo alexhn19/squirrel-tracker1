@@ -1,6 +1,6 @@
 # squirrel-tracker1
 
-## What is it ?
+## What is it?
 
 This tool keeps track of all known squirrels in Central Park based off of the 2018 Central Park Squirrel Census date.
 
